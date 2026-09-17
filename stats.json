@@ -1,0 +1,32 @@
+{
+  "total_views": 2,
+  "today_date": "2026-09-16",
+  "today_views": 2,
+  "success_count": 0,
+  "fail_count": 0,
+  "mode": "free",
+  "default_credits": 1,
+  "users": [
+    {
+      "chat_id": 8739519477,
+      "first_name": "𝗧𝗵𝗲𝗗𝗮𝗿𝗸𝗣𝗮𝗻𝗲𝗹 𝗢𝘄𝗻𝗲𝗿 𓆗",
+      "username": "TheDarkPanel_Owner",
+      "joined": "2026-09-16 17:15:59",
+      "credits": 1
+    },
+    {
+      "chat_id": 7523657948,
+      "first_name": "Simranjit",
+      "username": "rat_exper",
+      "joined": "2026-09-16 17:16:33",
+      "credits": 1
+    }
+  ],
+  "cracked_history": [],
+  "today_users": [
+    8739519477,
+    7523657948
+  ],
+  "cooldown_seconds": 60,
+  "max_concurrent_tasks": 15
+}
