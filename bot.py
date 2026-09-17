@@ -1573,16 +1573,26 @@ def cleanup_temp_files():
 if __name__ == "__main__":
     # Clean leftover logs, captures, or profiles on startup
     cleanup_temp_files()
-    
+
     loop = asyncio.new_event_loop()
     def run_loop(l):
         asyncio.set_event_loop(l)
         l.run_until_complete(aadhaar_engine.init_pool(bot))
         l.run_forever()
-    
+
     threading.Thread(target=run_loop, args=(loop,), daemon=True).start()
-    
+
     print("🤖 Bot is now LIVE.")
+
+    # Telegram bot polling — yahi asli kaam karta hai
+    while True:
+        try:
+            bot.infinity_polling(timeout=10, long_polling_timeout=5)
+        except Exception as e:
+            print(f"Restarting bot due to error: {e}")
+            import time
+            time.sleep(5)
+            continue
     
 
 
