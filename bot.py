@@ -1,4 +1,19 @@
 import os
+from threading import Thread
+from http.server import HTTPServer, BaseHTTPRequestHandler
+
+class Handler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"Bot is alive!")
+
+def run_web():
+    port = int(os.environ.get("PORT", 8080))
+    HTTPServer(("0.0.0.0", port), Handler).serve_forever()
+
+Thread(target=run_web, daemon=True).start()
+import os
 import sys
 import importlib
 import asyncio
